@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji RNG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game">
+
+        <h1>🎰 EMOJI RNG</h1>
+        <p class="subtitle">Roll emoji và săn những emoji hiếm!</p>
+
+        <div class="stats">
+            <div>
+                <span>ROLLS</span>
+                <b id="rolls">0</b>
+            </div>
+
+            <div>
+                <span>COLLECTED</span>
+                <b id="collected">0 / 30</b>
+            </div>
+        </div>
+
+        <div class="display">
+
+            <div id="rarity">READY</div>
+
+            <div id="emoji">❓</div>
+
+            <h2 id="name">Roll Me!</h2>
+
+            <p id="description">
+                Nhấn nút ROLL để bắt đầu.
+            </p>
+
+            <button id="roll">
+                🎲 ROLL
+            </button>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>📜 History</h2>
+
+            <div id="history">
+                <p>Chưa có roll.</p>
+            </div>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>📚 Collection</h2>
+
+            <div id="collection"></div>
+
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0b0b;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+.game {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stats div {
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 18px;
+    text-align: center;
+}
+
+.stats span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.stats b {
+    font-size: 25px;
+}
+
+.display {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 25px;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+#rarity {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#emoji {
+    font-size: 130px;
+    margin: 15px 0;
+    min-height: 155px;
+}
+
+#name {
+    font-size: 30px;
+}
+
+#description {
+    color: #888;
+    margin: 8px 0 25px;
+}
+
+#roll {
+    border: none;
+    background: white;
+    color: black;
+    padding: 16px 60px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#roll:hover {
+    transform: scale(1.05);
+}
+
+#roll:active {
+    transform: scale(.95);
+}
+
+#roll:disabled {
+    opacity: .5;
+    cursor: wait;
+}
+
+.rolling {
+    animation: spin .1s infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15) rotate(5deg);
+    }
+}
+
+.panel {
+    margin-top: 20px;
+    padding: 20px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+
+.panel h2 {
+    margin-bottom: 15px;
+}
+
+#history {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #202020;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.history-emoji {
+    font-size: 30px;
+}
+
+.history-name {
+    font-weight: bold;
+}
+
+.history-rarity {
+    font-size: 12px;
+}
+
+#collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    background: #202020;
+    border-radius: 12px;
+    padding: 15px 5px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.card-emoji {
+    font-size: 45px;
+}
+
+.card-name {
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.card-rarity {
+    font-size: 11px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.locked {
+    opacity: .3;
+    filter: grayscale(1);
+}
+
+.common {
+    color: #bdbdbd;
+}
+
+.uncommon {
+    color: #55efc4;
+}
+
+.rare {
+    color: #74b9ff;
+}
+
+.epic {
+    color: #a29bfe;
+}
+
+.legendary {
+    color: #ffeaa7;
+}
+
+.mythic {
+    color: #ff7675;
+}
+
+.secret {
+    color: #fd79a8;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .emoji {
+        font-size: 100px;
+    }
+
+    #collection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
